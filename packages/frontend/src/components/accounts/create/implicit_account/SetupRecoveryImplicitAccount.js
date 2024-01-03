@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Translate } from 'react-localize-redux';
 import styled from 'styled-components';
 
+import { validateEmail } from '../../../../utils/account';
 import RecoveryOption from '../../../accounts/recovery_setup/RecoveryOption';
 import FormButton from '../../../common/FormButton';
 import Container from '../../../common/styled/Container.css';
 import Tooltip from '../../../common/Tooltip';
-import { validateEmail } from '../../../../utils/account';
 
 const StyledContainer = styled(Container)`
     &&& {
@@ -72,7 +72,7 @@ export default ({
                     option='ledger'
                     active={recoveryOption}
                 />
-                 <h4>
+                <h4>
                     <Translate id='setupRecovery.basicSecurity' />
                     <Tooltip translate='profile.security.lessSecureDesc' icon='icon-lg' />
                 </h4>
