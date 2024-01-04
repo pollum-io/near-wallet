@@ -8,12 +8,17 @@ This is in-browser web-based wallet for working with NEAR accounts. This wallet 
 WARNING: This wallet shouldn't be used as the only signer for high-value accounts. Make sure to use hardware wallet when substantial amount of NEAR tokens is involved.
 
 ### Pollum Build Info
-run ````yarn``` on the root folder
 
-than at ```./packages/frontend```  run ```yarn && NEAR_WALLET_ENV=testnet yarn start```
+run `yarn` on the root folder
+
+than at `./packages/frontend` run `yarn && NEAR_WALLET_ENV=testnet yarn start`
 
 ## PACKAGES
+
 ### [e2e-tests](packages/e2e-tests)
+
 Test suite for verifying core use cases and user flow are functional in the UI
+
 ### [frontend](packages/frontend)
+
 Wallet frontend (React/Redux app).

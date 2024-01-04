@@ -26,6 +26,7 @@
     "@near-wallet-selector/sender": "8.3.0",
     "@near-wallet-selector/wallet-connect": "8.1.4",
     "@near-wallet-selector/welldone-wallet": "8.1.4",
+    "@near-wallet/feature-flags": "^0.2.0",
     "@reduxjs/toolkit": "1.6.2",
     "@sentry/browser": "^6.4.1",
     "bip39-light": "^1.0.7",
