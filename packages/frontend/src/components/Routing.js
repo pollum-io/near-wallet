@@ -88,7 +88,7 @@ import PrivateRoute from './common/routing/PrivateRoute';
 import PublicRoute from './common/routing/PublicRoute';
 import Route from './common/routing/Route';
 import TwoFactorDisableBanner from './common/TwoFactorDisableBanner';
-import { ExploreContainer } from './explore/ExploreContainer';
+// import { ExploreContainer } from './explore/ExploreContainer';
 import GlobalStyle from './GlobalStyle';
 import { LoginCliLoginSuccess } from './login/LoginCliLoginSuccess';
 import NavigationWrapper from './navigation/NavigationWrapper';
@@ -97,9 +97,9 @@ import { PageNotFound } from './page-not-found/PageNotFound';
 import Privacy from './privacy/Privacy';
 import { Profile } from './profile/Profile';
 import { ReceiveContainerWrapper } from './receive-money/ReceiveContainerWrapper';
-import { SendContainerWrapper } from './send/SendContainerWrapper';
-import { StakingContainer } from './staking/StakingContainer';
-import Swap from './swap/Swap';
+// import { SendContainerWrapper } from './send/SendContainerWrapper';
+// import { StakingContainer } from './staking/StakingContainer';
+// import Swap from './swap/Swap';
 import Terms from './terms/Terms';
 import '../index.css';
 import { getMigrationStep } from './wallet-migration/utils';
@@ -377,7 +377,7 @@ class Routing extends Component {
                             !isWhitelabel && !SHOW_MIGRATION_BANNER && (
                                 <Switch>
                                     <Route
-                                        path={['/', '/staking', '/profile']} component={TwoFactorDisableBanner}
+                                        path={['/', '/profile']} component={TwoFactorDisableBanner}
                                     />
                                 </Switch>
                             )
@@ -387,7 +387,7 @@ class Routing extends Component {
                             WEP_PHASE_ONE && (
                                 <Switch>
                                     <Route
-                                        path={['/', '/staking', '/profile']} render={() => (
+                                        path={['/', '/profile']} render={() => (
                                             <MigrationBanner
                                                 account={account}
                                                 onTransfer={this.handleTransferClick} 
@@ -667,11 +667,11 @@ class Routing extends Component {
                                     <AccessKeysWrapper type="full-access-keys" />
                                 )}
                             />
-                            <PrivateRoute
+                            {/* <PrivateRoute
                                 exact
                                 path="/send-money/:accountId?"
                                 component={SendContainerWrapper}
-                            />
+                            /> */}
                             <PrivateRoute
                                 exact
                                 path="/nft-detail/:contractId/:tokenId"
@@ -687,11 +687,11 @@ class Routing extends Component {
                                 path="/buy"
                                 component={BuyNear}
                             />
-                            <PrivateRoute
+                            {/* <PrivateRoute
                                 exact
                                 path="/swap"
                                 component={Swap}
-                            />
+                            /> */}
                             <Route
                                 exact
                                 path="/profile/:accountId"
@@ -707,21 +707,21 @@ class Routing extends Component {
                                 path="/sign"
                                 component={SignWrapper}
                             />
-                            <PrivateRoute
+                            {/* <PrivateRoute
                                 path="/staking"
                                 render={() => (
                                     <StakingContainer
                                         history={this.props.history}
                                     />
                                 )}
-                            />
-                            {isWhitelabel && (
+                            /> */}
+                            {/* {isWhitelabel && (
                                 <PrivateRoute
                                     exact
                                     path="/explore"
                                     component={ExploreContainer}
                                 />
-                            )}
+                            )} */}
                             <Route
                                 exact
                                 path="/cli-login-success"

@@ -231,12 +231,12 @@ export function BuyNear({ match, location, history }) {
 
     ].filter((v) => !!v);
 
-    const bridgeMethods = [
-        PayMethods.rainbow,
-        PayMethods.allbridge,
-        PayMethods.wormhole,
-        PayMethods.multichain,
-    ];
+    // const bridgeMethods = [
+    //     PayMethods.rainbow,
+    //     PayMethods.allbridge,
+    //     PayMethods.wormhole,
+    //     PayMethods.multichain,
+    // ];
 
     const exchangeMethods = [
         PayMethods.binance,
@@ -266,11 +266,11 @@ export function BuyNear({ match, location, history }) {
                     subTitle='buyNear.nearPurchaseSubTitle'
                     actions={onrampMethods}
                 />
-                <FundingCard
+                {/* <FundingCard
                     title='buyNear.bridgeTokens'
                     subTitle='buyNear.bridgeSubTitle'
                     actions={bridgeMethods}
-                />
+                /> */}
                 <FundingCard title='buyNear.supportedExchanges'
                     subTitle='buyNear.supportedSubTitle'
                     link={{

@@ -3,15 +3,15 @@ import { Translate } from 'react-localize-redux';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { DONATE_TO_UKRAINE } from '../../../../../features';
-import { IS_MAINNET } from '../../config';
+// import { DONATE_TO_UKRAINE } from '../../../../../features';
+// import { IS_MAINNET } from '../../config';
 import { isWhitelabel } from '../../config/whitelabel';
 import { Mixpanel } from '../../mixpanel/index';
-import DonateToUkraineIcon from '../svg/DonateToUkraineIcon';
-import ExploreIcon from '../svg/ExploreIcon';
+// import DonateToUkraineIcon from '../svg/DonateToUkraineIcon';
+// import ExploreIcon from '../svg/ExploreIcon';
 import HelpIcon from '../svg/HelpIcon';
 import UserIcon from '../svg/UserIcon';
-import VaultIcon from '../svg/VaultIcon';
+// import VaultIcon from '../svg/VaultIcon';
 import WalletIcon from '../svg/WalletIcon';
 
 const Container = styled.div`
@@ -112,16 +112,16 @@ const NavLinks = () => (
             <WalletIcon/>
             <Translate id='link.wallet'/>
         </NavLink>
-        <NavLink data-test-id="staking_navlink" to='/staking' activeClassName='selected' onClick={() => Mixpanel.track('Click Staking button on nav')}>
+        {/* <NavLink data-test-id="staking_navlink" to='/staking' activeClassName='selected' onClick={() => Mixpanel.track('Click Staking button on nav')}>
             <VaultIcon/>
             <Translate id='link.staking'/>
-        </NavLink>
-        {isWhitelabel && (
+        </NavLink> */}
+        {/* {isWhitelabel && (
             <NavLink data-test-id="explore_navlink" to='/explore' activeClassName='selected' onClick={() => Mixpanel.track('Click Explore button on nav')}>
                 <ExploreIcon/>
                 <Translate id='link.explore'/>
             </NavLink>
-        )}
+        )} */}
         <NavLink to='/profile' className='account-details-link' activeClassName='selected' onClick={() => Mixpanel.track('Click Account button on nav')}>
             <UserIcon/>
             <Translate id='link.account'/>
@@ -130,7 +130,7 @@ const NavLinks = () => (
             <HelpIcon/>
             <Translate id='link.help'/>
         </a>
-        {DONATE_TO_UKRAINE && (
+        {/* {DONATE_TO_UKRAINE && (
             <NavLink
                 to={`/send-money/${IS_MAINNET ? 'ukraine' : 'ukraine.testnet'}`}
                 activeClassName="selected"
@@ -139,7 +139,7 @@ const NavLinks = () => (
                 <DonateToUkraineIcon />
                 <Translate id="link.donateToUkraine" />
             </NavLink>
-        )}
+        )} */}
     </Container>
 );
 
